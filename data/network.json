@@ -1,0 +1,48 @@
+{
+  "$schema": "./schema/network.schema.json",
+  "network_name": "CyberDT-Lab",
+  "devices": [
+    {
+      "id": "web-01",
+      "type": "web_server",
+      "criticality": "high",
+      "ports": [443],
+      "services": [
+        {
+          "name": "https",
+          "port": 443,
+          "protocol": "TCP",
+          "version": "Apache 2.4.49",
+          "vulnerabilities": [
+            {
+              "id": "CVE-2021-41773",
+              "cvss": 7.5,
+              "description": "Path traversal in Apache HTTP Server 2.4.49"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "db-01",
+      "type": "database",
+      "criticality": "critical",
+      "ports": [3306],
+      "services": [
+        {
+          "name": "mysql",
+          "port": 3306,
+          "protocol": "TCP"
+        }
+      ]
+    }
+  ],
+  "connections": [
+    {
+      "source": "web-01",
+      "target": "db-01",
+      "port": 3306,
+      "protocol": "TCP"
+    }
+  ]
+}
