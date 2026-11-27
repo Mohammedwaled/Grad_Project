@@ -1,0 +1,525 @@
+🥇 1.  CIC-IDS2017 — أهم واحدة
+
+
+[CIC-IDS2017 على Kaggle](https://www.kaggle.com/datasets/dhoogla/cicids2017?utm_source=chatgpt.com)
+
+**ليه اخترتها؟**
+
+لأنها أقرب Dataset للجزء بتاع **Network Attack Detection** عندكم.
+
+فيها Network Flow data، والنسخة الموجودة على Kaggle فيها ملفات منفصلة لـ:
+
+- Benign
+- Brute Force
+- DDoS
+- DoS
+- Infiltration 
+- Port Scan
+- Web Attacks
+- Botnet
+
+وكمان النسخة المنظفة على Kaggle لا تحتوي على missing records.
+
+وده مهم جدًا عندكم لأنكم عايزين الـAI يتعلم:
+
+```
+Network Traffic
+      ↓
+Attack Pattern
+      ↓
+Attack Type
+      ↓
+Attack Result
+```
+
+
+
+1-CIC-IDS2017 – بيانات يوم الاثنين (Monday)
+
+اسم الملف:  
+Benign-Monday-no-metadata.parquet
+
+حجم البيانات:
+
+- عدد الصفوف: 458,831
+    
+- عدد الأعمدة: 78
+    
+
+وصف البيانات:  
+يحتوي الملف على بيانات Network Traffic، حيث يمثل كل صف Network Flow أو اتصال داخل الشبكة، بينما تمثل الأعمدة خصائص ومعلومات مختلفة عن هذا الاتصال.
+
+من أمثلة الأعمدة:
+
+- نوع البروتوكول (Protocol)
+    
+- مدة الاتصال (Flow Duration)
+    
+- عدد الـPackets في الاتجاه الأمامي والخلفي
+    
+- أحجام الـPackets
+    
+- متوسط وأقصى وأقل حجم للـPackets
+    
+- معلومات النشاط (Active Time)
+    
+- معلومات فترات التوقف (Idle Time)
+    
+
+التصنيف:  
+البيانات الظاهرة في الملف مصنفة باسم Benign، أي أنها تمثل Network Traffic طبيعي وغير ضار.
+
+أهمية البيانات للمشروع:  
+تعتبر هذه البيانات مهمة لتدريب نموذج اكتشاف الهجمات، لأنها تساعد النموذج على تعلم شكل وسلوك الـNetwork Traffic الطبيعي، وبالتالي يستطيع لاحقًا التمييز بين النشاط الطبيعي والهجمات عند استخدام بيانات تحتوي على أنواع مختلفة من الـAttacks.
+
+الاستخدام الأساسي:  
+Attack Detection / Network Traffic Classification
+
+حالة البيانات:  
+يتم الاحتفاظ بالملف في صورته الأصلية وبجميع الأعمدة الـ78، ثم تتم معالجته لاحقًا حسب احتياجات الـModel.
+
+
+
+                                                                            2-CIC-IDS2017 – يوم الثلاثاء (Tuesday)
+
+- عدد الصفوف: 389,714
+    
+- عدد الأعمدة: 78
+    
+
+يحتوي الملف على بيانات Network Traffic، حيث يمثل كل صف اتصالًا أو Network Flow داخل الشبكة، بينما تصف الأعمدة خصائص هذا الاتصال مثل البروتوكول، مدة الاتصال، عدد وحجم الـPackets، النشاط وفترات الخمول.
+
+الصفوف الظاهرة مصنفة كـBenign، أي Traffic طبيعي، لكن يجب فحص جميع قيم Label لمعرفة ما إذا كانت توجد هجمات أخرى.
+
+أهمية البيانات للمشروع:  
+تستخدم في تدريب نموذج Attack Detection وNetwork Traffic Classification للتعرف على الفرق بين الـTraffic الطبيعي والهجمات.
+                                                                            
+
+
+3-
+
+CIC-IDS2017 – يوم الأربعاء (Wednesday)
+
+- عدد الصفوف: 584,991
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- الأعمدة تصف خصائص الاتصال مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل للتأكد من وجود أنواع هجمات أخرى.
+    
+
+الأهمية للمشروع:  
+تُستخدم في تدريب Attack Detection وNetwork Traffic Classification Models للتعرف على الـTraffic الطبيعي وتمييزه عن الهجمات.
+
+
+
+4-
+CIC-IDS2017 – Infiltration Thursday
+
+- عدد الصفوف: 207,630
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص الاتصال مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل للتأكد من أنواع الـAttacks الموجودة.
+    
+
+الأهمية للمشروع:  
+مهمة لاكتشاف وتحليل هجمات Infiltration، وتساعد في تدريب نماذج Attack Detection وNetwork Traffic Classification.
+
+5-
+
+CIC-IDS2017 – Web Attacks Thursday
+
+- عدد الصفوف: 155,820
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة أنواع الهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مهمة لتحليل واكتشاف هجمات الويب (Web Attacks)، وتفيد في تدريب نماذج Attack Detection وNetwork Traffic Classification.
+
+
+
+6-CIC-IDS2017 – Botnet Friday
+
+- عدد الصفوف: 176,038
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل للتأكد من وجود الـBotnet Attacks والـLabels الأخرى.
+    
+
+الأهمية للمشروع:  
+مهمة لتحليل واكتشاف هجمات Botnet، وتفيد في تدريب نماذج Attack Detection وNetwork Traffic Classification، خصوصًا في التمييز بين الـBenign Traffic والـBotnet Traffic.
+
+
+7-CIC-IDS2017 – DDoS Friday
+
+- عدد الصفوف: 221,264
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل للتأكد من وجود DDoS Traffic وأنواع أخرى من الـLabels.
+    
+
+الأهمية للمشروع:  
+مهمة لتحليل واكتشاف هجمات DDoS، وتفيد في تدريب نموذج Attack Detection وNetwork Traffic Classification للتمييز بين الـBenign Traffic والـDDoS Traffic.
+
+8-CIC-IDS2017 – Port Scan Friday
+
+- عدد الصفوف: 119,522
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل للتأكد من وجود Port Scan Attacks والـLabels الأخرى.
+    
+
+الأهمية للمشروع:  
+مهمة لتحليل واكتشاف هجمات Port Scanning، وتفيد في تدريب نموذج Attack Detection وNetwork Traffic Classification للتمييز بين الـBenign Traffic وPort Scan Traffic.
+
+
+
+---
+
+# 🥈 2. CSE-CIC-IDS2018
+
+[CSE-CIC-IDS2018 على Kaggle](https://www.kaggle.com/datasets/dhoogla/csecicids2018?utm_source=chatgpt.com)
+
+دي مش مجرد نسخة تانية من الأولى.
+
+هي **Successor لـCIC-IDS2017**، لكن اتعملت على بنية مختلفة باستخدام AWS، وفيها تمثيل أكبر لهجمات **Infiltration**. والنسخة النظيفة الموجودة على Kaggle موضح أنها بدون missing information وبدون duplicate records.
+
+### ليه دي مهمة؟
+
+لأنك مش عايز الـModel يحفظ شكل CIC-IDS2017.
+
+تقدر تعمل:
+
+```
+Train
+   ↓
+CIC-IDS2017
+
+Test / Generalization
+   ↓
+CSE-CIC-IDS2018
+```
+
+لو الـModel أداؤه كويس على Dataset مختلفة، دي **إشارة أقوى إن الموديل اتعلم patterns فعلية** مش مجرد حفظ خصائص Dataset واحدة.
+
+
+1-CIC-IDS2018 – DDoS1 Tuesday
+
+- عدد الصفوف: 954,846
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل للتأكد من وجود DDoS Traffic والـLabels الأخرى.
+    
+
+الأهمية للمشروع:  
+مهمة لتحليل واكتشاف هجمات DDoS، وتفيد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا للتعرف على أنماط DDoS والتمييز بينها وبين الـBenign Traffic.
+
+ملاحظة:  
+حجمها كبير جدًا (قرابة مليون صف)، لذلك يفضل الاحتفاظ بها كـParquet واستخدامها بالـChunks أو أخذ عينة مناسبة أثناء التدريب بدل تحميلها بالكامل في الذاكرة.
+
+2-CIC-IDS2018 – DDoS2 Wednesday
+
+- عدد الصفوف: 561,396
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة جدًا لتحليل واكتشاف هجمات DDoS، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification على بيانات أكبر وأكثر تنوعًا.
+
+ملاحظة:  
+حجمها كبير، لذلك يفضل عدم تحميلها بالكامل في الذاكرة أثناء التدريب، ويمكن استخدام Sampling أو تقسيم البيانات إلى أجزاء.
+
+
+3-CIC-IDS2018 – DoS1 Thursday
+
+- عدد الصفوف: 794,812
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف هجمات DoS، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في التمييز بين الـBenign Traffic وهجمات DoS.
+
+ملاحظة:  
+حجمها كبير جدًا، لذلك يفضل استخدام Sampling أو معالجة البيانات على أجزاء أثناء التدريب بدل تحميل الملف بالكامل.
+
+
+4-CIC-IDS2018 – DoS2 Friday
+
+- عدد الصفوف: 591,873
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف هجمات DoS، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في التعرف على أنماط DoS والتمييز بينها وبين الـBenign Traffic.
+
+ملاحظة:  
+حجم البيانات كبير، لذلك يفضل استخدام Sampling أو معالجة الملف على أجزاء أثناء التدريب بدل تحميله بالكامل في الذاكرة.
+
+
+
+5-CIC-IDS2018 – Bruteforce Wednesday
+
+- عدد الصفوف: 619,346
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف هجمات Brute Force، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في التمييز بين الـBenign Traffic ومحاولات Brute Force.
+
+ملاحظة:  
+الملف كبير جدًا، لذلك يفضل استخدام Sampling أو معالجة البيانات على أجزاء أثناء التدريب.
+
+
+6-CIC-IDS2018 – Infiltration Wednesday
+
+- عدد الصفوف: 456,873
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف هجمات Infiltration، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في اكتشاف الأنشطة غير الطبيعية داخل الشبكة والتمييز بينها وبين الـBenign Traffic.
+
+ملاحظة:  
+حجم الملف كبير، لذلك يفضل استخدام Sampling أو معالجة البيانات على أجزاء أثناء التدريب.
+
+
+7-CIC-IDS2018 – Infiltration Thursday
+
+- عدد الصفوف: 249,170
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف هجمات Infiltration، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في اكتشاف الأنشطة غير الطبيعية داخل الشبكة والتمييز بينها وبين الـBenign Traffic.
+
+ملاحظة:  
+حجم الملف متوسط مقارنة ببعض ملفات CIC-IDS2018 السابقة، ومع ذلك يفضل استخدام Sampling أو معالجة البيانات على أجزاء أثناء التدريب.
+
+
+8-CIC-IDS2018 – Web1 Thursday
+
+- عدد الصفوف: 830,224
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف Web Attacks، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في التعرف على أنماط هجمات الويب والتمييز بينها وبين الـBenign Traffic.
+
+ملاحظة:  
+الملف كبير نسبيًا، لذلك يفضل استخدام Sampling أو معالجة البيانات على أجزاء أثناء التدريب بدل تحميل الملف بالكامل في الذاكرة.
+
+
+9-CIC-IDS2018 – Web2 Friday
+
+- عدد الصفوف: 829,405
+    
+- عدد الأعمدة: 78
+    
+- تحتوي على بيانات Network Traffic وNetwork Flows.
+    
+- تشمل خصائص مثل Protocol، مدة الاتصال، عدد وأحجام الـPackets، وخصائص الـActive/Idle.
+    
+- الصفوف الظاهرة مصنفة كـBenign، لكن يجب فحص عمود Label بالكامل لمعرفة جميع أنواع الـTraffic والهجمات الموجودة.
+    
+
+الأهمية للمشروع:  
+مفيدة لتحليل واكتشاف Web Attacks، وتساعد في تدريب نموذج Attack Detection وNetwork Traffic Classification، خصوصًا في التعرف على أنماط هجمات الويب والتمييز بينها وبين الـBenign Traffic.
+
+ملاحظة:  
+الملف كبير جدًا، لذلك يفضل استخدام Sampling أو معالجة البيانات على أجزاء أثناء التدريب بدل تحميله بالكامل في الذاكرة.
+
+
+
+
+
+
+
+
+
+---
+
+# 🥉 3. UNSW-NB15
+
+[UNSW-NB15 على Kaggle](https://www.kaggle.com/datasets/dhoogla/unswnb15?utm_source=chatgpt.com)
+
+ودي بالنسبة لي **ضرورية كالثالثة** لأننا عايزين مصدر مختلف عن عائلة CIC.
+
+تم إنشاؤها في **UNSW Canberra Cyber Range Lab**، وتجمع normal activity مع contemporary attack behaviors، وتحتوي على **49 feature** وتصنيفات لهجمات مثل:
+
+- Fuzzers
+- Analysis
+- Backdoors
+- DoS
+- Exploits
+- Generic
+- Reconnaissance
+- Shellcode
+- Worms
+
+وكمان الـdataset الأصلية لها PCAP وBro وArgus data بجانب الـCSV.
+
+
+
+
+10- UNSW-NB15 – Testing Set
+
+- عدد الصفوف: 82,332
+    
+- عدد الأعمدة: 36
+    
+- تحتوي على بيانات Network Traffic مصنفة لاستخدامها في تدريب واختبار نماذج الـCybersecurity.
+    
+- تحتوي على خصائص متنوعة مثل:
+    
+    - Protocol
+        
+    - Service
+        
+    - Connection State
+        
+    - عدد وحجم الـPackets
+        
+    - معدل نقل البيانات
+        
+    - خصائص الـFlow والـHTTP/FTP
+        
+- تحتوي على عمودين مهمين جدًا للتصنيف:
+    
+    - `attack_cat` → نوع الهجوم أو Normal
+        
+    - `label` → 0 للـNormal و1 للـAttack
+        
+
+الأهمية للمشروع:  
+مفيدة جدًا لتدريب واختبار نموذج Attack Detection، لأنها تحتوي على **Normal Traffic + أنواع متعددة من الهجمات** مع Labels واضحة، وبالتالي توفر Ground Truth جيد لتقييم الـModel.
+
+ميزة مهمة:  
+الـUNSW-NB15 مختلفة عن CIC-IDS2017/2018 في شكل وخصائص الـFeatures، وده مفيد لاختبار قدرة الـModel على التعامل مع مصادر بيانات مختلفة.
+
+ملاحظة:  
+ده **Testing Set**، لذلك الأفضل الحفاظ عليه منفصلًا وعدم استخدامه في تدريب الـModel، واستخدامه في التقييم النهائي.
+
+
+
+
+2- UNSW-NB15 – Training Set
+
+- عدد الصفوف: 175,341
+    
+- عدد الأعمدة: 36
+    
+- تحتوي على بيانات Network Traffic مصنفة لاستخدامها في تدريب نماذج الـCybersecurity.
+    
+- تحتوي على خصائص متنوعة مثل:
+    
+    - Protocol
+        
+    - Service
+        
+    - Connection State
+        
+    - عدد وحجم الـPackets
+        
+    - معدل نقل البيانات
+        
+    - خصائص الـFlow والـHTTP/FTP
+        
+- تحتوي على عمودين مهمين للتصنيف:
+    
+    - `attack_cat` → نوع الهجوم أو Normal
+        
+    - `label` → 0 للـNormal و1 للـAttack
+        
+
+الأهمية للمشروع:  
+دي من أهم الملفات عندنا لأنها **Training Set جاهزة ومصنفة**، وتحتوي على Normal Traffic بالإضافة إلى أنواع متعددة من الهجمات، وبالتالي مناسبة جدًا لتدريب نموذج Attack Detection.
+
+ميزة مهمة:  
+تختلف الـFeatures عن CIC-IDS2017/2018، وده يسمح لنا بتجربة الـModel على Dataset مختلفة بدل الاعتماد على مصدر واحد.
+
+ملاحظة:  
+ده **Training Set**، لذلك مناسب للتدريب، مع تخصيص جزء من البيانات للـValidation حسب طريقة الـTraining.
