@@ -1,0 +1,20 @@
+timestamp,scenario,attacker,target,tactic_id,tactic,technique_id,technique,kill_chain_stage,port,state,latency_ms
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,21,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,22,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,23,closed,3
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,25,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,53,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,80,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,110,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,135,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,139,closed,4
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,143,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,443,open,5
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,445,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,993,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,995,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,1433,closed,1
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,3306,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,3389,closed,4
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,5900,closed,2
+2026-11-27T19:11:14.416330+00:00,port_scanning,external-attacker,web-01,TA0007,discovery,T1046,Network Service Discovery,Actions on Objectives,8080,closed,4
